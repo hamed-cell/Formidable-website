@@ -1,0 +1,235 @@
+:root {
+    --primary-color: #2563eb; 
+    --secondary-color: #f9fafb;  
+    --accent-color: #10b981; 
+    --dark-bg: #1f2937;
+    --text-color: #1f2937;
+    --font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5em;
+    color: var(--primary-color);
+    background: linear-gradient(to right, #2563eb, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+.nav-list li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-list li a:hover, .nav-list li a:focus {
+    background-color: var(--accent-color);
+    border-radius: 5px;
+}
+
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 5px 0;
+}
+
+.section {
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.intro-text {
+    margin-bottom: 20px;
+}
+
+.intro-image {
+    max-width: 60%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
+.button {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover {
+    background: var(--accent-color);
+}
+
+.theme-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.theme-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.theme-card:hover {
+    transform: translateY(-5px);
+}
+
+.theme-image {
+    width: 100%;
+    height: auto;
+}
+
+.theme-card h3 {
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .intro-section {
+        padding: 20px; 
+    }
+
+    .intro-text {
+        margin-bottom: 20px;
+    }
+
+    .intro-image {
+        max-width: 100%;
+    }
+
+    .nav-list.open {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        background: var(--primary-color);
+        top: 60px;
+        left: 0;
+    }
+
+    .theme-card {
+        width: 100%;
+    }
+}
+
+.footer {
+    background-color: var(--dark-bg);
+    color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 100px;
+}
+.theme-switcher {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-switcher:hover {
+    background-color: var(--accent-color);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dark-theme {
+    --primary-color: #00ffa2; 
+    --secondary-color: #1f2937;
+    --accent-color: #2563eb; 
+    --dark-bg: #fafafa;
+    --text-color: #f9fafb;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+}

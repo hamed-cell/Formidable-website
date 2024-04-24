@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMI-DABLE - Bibliothèque de Formulaires Réutilisables</title>
+    <link rel="stylesheet" href="test.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body class="light-theme">
+    <div class="container">
+        <header class="header">
+            <nav class="navigation">
+                <div class="logo" onclick="window.location.href='#home'">
+                    <img src="logo.webp" alt="LOGO FORMI-DABLE" style="height: 80px;"> 
+                </div>
+                <div class="nav-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#installation">Installation</a></li>
+                    <li><a href="#quick-start">Quick Start</a></li>
+                    <li><a href="#examples">Exemples</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="theme-switcher" onclick="toggleTheme()">Changer de thème</button>
+            </nav>
+        </header>
+        <main class="main">
+            <header class="logo-container">
+                <h1 class="logo">Formidable</h1>
+              </header>              
+            <section id="introduction" class="section intro-section" data-aos="fade-right">
+                <img src="imgcode.png" alt="Moins de code. Moins de cas Edge." class="intro-image">
+                <div class="intro-text">
+                    <p>FORMI-DABLE propose des formulaires personnalisables prêts à l'emploi. Importez facilement des formulaires sur mesure et concentrez-vous sur l'essentiel de vos projets.</p>
+                    <div class="button-group">
+                        <a href="https://github.com/Messaoudiam/Form-idable" class="button github-button" target="_blank">Voir sur GitHub</a>
+                        <a href="https://www.votresite.com/documentation" class="button doc-button" target="_blank">Documentation</a>
+                    </div>
+                </div>
+            </section>
+            <section id="installation" class="section" data-aos="fade-left">
+                <h2>Installation</h2>
+                <p>Pour commencer à utiliser la bibliothèque, suivez ces étapes :</p>
+                <ol>
+                    <li>Clonez ce dépôt sur votre machine locale :
+                        <code>git@github.com:WildCodeSchool-CDA-LYON-02-2024/React-Form.git</code>
+                    </li>
+                    <li>Installez les dépendances nécessaires à l'aide de npm :
+                        <code>npm install</code>
+                    </li>
+                    <li>Dans le répertoire du projet, exécutez le script suivant :
+                        <code>npm run dev</code>
+                    </li>
+                </ol>
+                <p>Ouvrez <a href="http://localhost:3000">http://localhost:3000</a> pour accéder au serveur de développement.</p>
+            </section>
+            <section id="themes" class="section" data-aos="fade-left">
+                <h2>Thèmes de formulaire</h2>
+                <div class="theme-container">
+                    <article class="theme-card" data-aos="flip-left" data-aos-delay="100">
+                        <h3>Thème Nature</h3>
+                        <img src="formNature.png" alt="Thème Nature" class="theme-image">
+                        <p>Des formulaires inspirés par la nature avec des couleurs apaisantes et des illustrations de paysages naturels.</p>
+                    </article>
+                    <article class="theme-card" data-aos="flip-left" data-aos-delay="200">
+                        <h3>Thème Échec</h3>
+                        <img src="EchecForm.png" alt="Thème Échec" class="theme-image">
+                        <p>Des formulaires ludiques mettant en avant le jeu d'échecs.</p>
+                    </article>
+                    <article class="theme-card" data-aos="flip-left" data-aos-delay="300">
+                        <h3>Thème Mer</h3>
+                        <img src="formSea.png" alt="Thème Mer" class="theme-image">
+                        <p>Des formulaires inspirés par l'océan avec des teintes bleues et des motifs marins.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer class="footer" >
+            <div class="contact-section">
+                <h2>Contact</h2>
+                <p>Vous avez des questions ou besoin d'assistance ? Contactez notre groupe pour une aide rapide et efficace.</p>
+                <a href="mailto:support@formidable.com">Envoyer un email</a>
+            </div>
+            <div class="logo-container">
+                <img src="logo.webp" alt="FORMI-DABLE" class="footer-logo">
+                <p>© 2024 Hamed ATTAR Tous droits réservés.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="test.js"></script>
+    <script>
+        AOS.init({
+            offset: 200, 
+            duration: 600, 
+        });
+
+    </script>
+</body>
+</html>
